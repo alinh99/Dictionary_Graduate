@@ -23,7 +23,21 @@ public class MainActivity extends AppCompatActivity {
     private AppBarConfiguration mAppBarConfiguration;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        // save dark mode in all pages
+        SharedPreferences sharedPreferences = getSharedPreferences( "sharedPrefs", MODE_PRIVATE);
+        final SharedPreferences.Editor editor = sharedPreferences.edit();
+        final boolean isDarkModeOn = sharedPreferences.getBoolean( "isDarkModeOn", false);
 
+        if (isDarkModeOn) {
+            AppCompatDelegate.setDefaultNightMode( AppCompatDelegate.MODE_NIGHT_YES);
+            editor.putBoolean ( "isDarkModeOn",true );
+            editor.apply ();
+        }
+        else {
+            AppCompatDelegate.setDefaultNightMode( AppCompatDelegate.MODE_NIGHT_NO);
+            editor.putBoolean ( "isDarkModeOn",false );
+            editor.apply ();
+        }
         super.onCreate ( savedInstanceState );
         setContentView ( R.layout.activity_main );
         Toolbar toolbar = findViewById ( R.id.toolbar_main );
@@ -39,21 +53,7 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupActionBarWithNavController ( this, navController, mAppBarConfiguration );
         NavigationUI.setupWithNavController ( navigationView, navController );
 
-//         save dark mode in all pages
-        SharedPreferences sharedPreferences = getSharedPreferences( "sharedPrefs", MODE_PRIVATE);
-        final SharedPreferences.Editor editor = sharedPreferences.edit();
-        final boolean isDarkModeOn = sharedPreferences.getBoolean( "isDarkModeOn", false);
 
-        if (isDarkModeOn) {
-            AppCompatDelegate.setDefaultNightMode( AppCompatDelegate.MODE_NIGHT_YES);
-            editor.putBoolean ( "isDarkModeOn",true );
-            editor.apply ();
-        }
-        else {
-            AppCompatDelegate.setDefaultNightMode( AppCompatDelegate.MODE_NIGHT_NO);
-            editor.putBoolean ( "isDarkModeOn",false );
-            editor.apply ();
-        }
     }
 
 
