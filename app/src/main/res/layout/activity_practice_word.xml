@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.PracticeWordActivity">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:background="@color/colorPrimary"
+                app:layout_collapseMode="parallax" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Score"
+                android:textSize="13sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_gravity="right"
+                android:textColor="#fff"/>
+
+            <TextView
+                android:id="@+id/tv_score_practice_word"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textSize="13sp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="25dp"
+                android:layout_gravity="right"
+                android:textColor="#fff"/>
+
+            <androidx.viewpager.widget.ViewPager
+            android:id="@+id/view_pager_practice_word"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+    </androidx.viewpager.widget.ViewPager>
+
+    <TextView
+        android:id="@+id/tv_result_practice_word"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your Word"
+        android:textColor="@color/textColor"
+        android:textSize="30sp"
+        app:layout_anchor="@+id/view_pager_practice_word"
+        app:layout_anchorGravity="center" />
+
+    <TextView
+        android:textColor="#000"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Press to speak"
+        android:textSize="20sp"
+        app:layout_anchor="@+id/view_pager_practice_word"
+        app:layout_anchorGravity="bottom|center" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+

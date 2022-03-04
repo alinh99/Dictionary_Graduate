@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#f50</color>
+    <color name="colorPrimaryDark">#f50</color>
+    <color name="colorAccent">#f50</color>
+
+    <!--Normal/Light Mode-->
+    <color name="backgroundColor">#212121</color>
+    <color name="textColor">#fff</color>
+    <color name="textColorDark">#f50</color>
+    <color name="backgroundDark">#f50</color>
+    <color name="textDark">#fff</color>
+</resources>

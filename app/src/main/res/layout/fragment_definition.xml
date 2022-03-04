@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:background="@color/backgroundColor">
+
+        <TextView
+            android:id="@+id/tv_definition"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/definition_of_the_words"
+            android:layout_margin="20dp"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:lineSpacingExtra="5dp"
+            android:textIsSelectable="true"
+            android:gravity="center"
+            android:textColor="@color/textColor"/>
+
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_eng_viet"
+    >
+
+    <fragment
+        android:id="@+id/nav_eng_viet"
+        android:name="com.vnuk.tuhocandroid.dictionary.ui.engviet.EngVietFragment"
+        android:label="@string/eng_viet"
+        tools:layout="@layout/fragment_eng_viet"
+        />
+
+    <fragment
+        android:id="@+id/nav_your_word"
+        android:name="com.vnuk.tuhocandroid.dictionary.ui.yourwords.YourWordsFragment"
+        android:label="@string/your_word"
+        tools:layout="@layout/fragment_your_words" />
+
+    <fragment
+        android:id="@+id/nav_practice"
+        android:name="com.vnuk.tuhocandroid.dictionary.ui.practice.PracticeFragment"
+        android:label="@string/practice"
+        tools:layout="@layout/fragment_practice" />
+    
+</navigation>

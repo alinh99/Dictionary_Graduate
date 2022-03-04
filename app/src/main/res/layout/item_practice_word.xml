@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageButton
+        android:id="@+id/arrow_back_practice_word"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@null"
+        android:src="@drawable/ic_arrow_back"
+        android:onClick="clickOnBackWord"/>
+
+        <ImageButton
+            android:id="@+id/ib_voice_practice_word"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="right"
+            android:layout_marginTop="50dp"
+            android:layout_marginRight="20dp"
+            app:layout_collapseMode="parallax"
+            android:background="@drawable/ic_volume_up"
+            android:onClick="clickOnSoundWord"/>
+        <TextView
+            android:id="@+id/tv_practice_word"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textColor="#fff"
+            android:textSize="20sp"
+            android:layout_gravity="left"
+            android:layout_marginTop="70dp"
+            android:layout_marginLeft="20dp"/>
+
+    <ImageButton
+        android:id="@+id/ib_speak_practice_word"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        app:srcCompat="@drawable/ic_voice"
+        android:layout_gravity="center"
+        android:layout_marginTop="300dp"
+        android:onClick="clickOnSpeakWord"/>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
